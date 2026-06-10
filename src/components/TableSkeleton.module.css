@@ -1,0 +1,49 @@
+.skeletonContainer {
+  animation: fadeIn 0.2s ease;
+}
+
+.toolbarSkeleton {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.bone {
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--border-default) 50%, var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+.searchBone { height: 36px; flex: 1; min-width: 200px; }
+.filterBone { height: 36px; width: 100px; }
+.countBone { height: 36px; width: 140px; }
+
+.tableSkeleton {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.headerRow {
+  display: flex;
+  gap: var(--space-md);
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.headerBone { height: 12px; flex: 1; border-radius: 2px; }
+
+.dataRow {
+  display: flex;
+  gap: var(--space-md);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dataRow:nth-child(even) { background: var(--bg-table-row-alt); }
+
+.cellBone { height: 12px; border-radius: 2px; }

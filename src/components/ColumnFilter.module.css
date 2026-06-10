@@ -1,0 +1,176 @@
+.filterButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity var(--transition-fast), background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.filterButton:hover {
+  opacity: 1;
+  color: var(--text-primary);
+  background: var(--bg-table-row-hover);
+}
+
+.filterButtonActive {
+  opacity: 1;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border-color: var(--border-focus);
+}
+
+.popover {
+  position: fixed;
+  z-index: 1000;
+  width: 260px;
+  max-height: 360px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  padding: 8px;
+  gap: 8px;
+  animation: fadeIn 0.12s ease;
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 6px 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--border-focus);
+}
+
+.selectAllRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 6px;
+}
+
+.selectedCount {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.list {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 80px;
+  max-height: 220px;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition-fast);
+}
+
+.checkboxRow:hover {
+  background: var(--bg-table-row-hover);
+}
+
+.checkboxRow input[type="checkbox"] {
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.valueLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.statusRow {
+  padding: 12px 6px;
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.truncatedHint {
+  padding: 6px;
+  margin-top: 4px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.actionsRight {
+  display: flex;
+  gap: 6px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 5px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  border: 1px solid var(--border-default);
+}
+
+.primaryBtn {
+  background: var(--text-primary);
+  color: var(--bg-secondary);
+  border-color: var(--text-primary);
+}
+
+.primaryBtn:hover {
+  opacity: 0.9;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.secondaryBtn:hover {
+  color: var(--text-primary);
+  background: var(--bg-table-row-hover);
+}

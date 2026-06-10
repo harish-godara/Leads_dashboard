@@ -1,0 +1,104 @@
+.bar {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--bg-input);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.bar:focus-within {
+  border-color: var(--border-focus);
+}
+
+.barActive {
+  border-color: var(--border-focus);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-right: 1px solid var(--border-default);
+  background: var(--bg-table-row-hover, transparent);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.label svg {
+  color: var(--text-muted);
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.fieldLabel {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  padding: 6px 0;
+  color-scheme: dark;
+}
+
+.applyBtn {
+  padding: 0 12px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--border-default);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.applyBtn:hover:not(:disabled) {
+  background: var(--bg-table-row-hover);
+}
+
+.applyBtn:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.clearBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--border-default);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.clearBtn:hover {
+  background: var(--bg-table-row-hover);
+  color: var(--text-primary);
+}
